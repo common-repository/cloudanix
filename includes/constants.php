@@ -1,0 +1,20 @@
+<?php defined('ABSPATH') or die("No script kiddies please!");
+
+define('cloudanix_env', 'prod');
+define('cloudanix_base_url', (cloudanix_env == 'prod' ? 'https://www.cloudanix.com/v1/register/' : 'http://localhost:3002/v1/register/'));
+define('cloudanix_init_url', cloudanix_base_url . 'wp_install');
+define('cloudanix_update_url', cloudanix_base_url . 'wp_update');
+define('cloudanix_status_check_url', cloudanix_base_url . 'wp_ping');
+define('cloudanix_delete_url', cloudanix_base_url . 'wp_uninstall');
+define('cloudanix_menu_slug', 'cloudanix-settings');
+define('cloudanix_default_recipes', 'speedtests,dnsinfo,privacyscore,owasptop10,safeindex,uptimecheck');
+define('cloudanix_version', '1.0');
+define('cloudanix_success_key', 'SUCCESS');
+define('cloudanix_activation_success_message', 'Congratulations! Your site has been integrated with Cloudanix. We have started monitoring your site. Lookout for an email with instructions to setup your account and to view your Dashboard.');
+define('cloudanix_activation_failure_message', 'Failed to integrate your site with Cloudanix. Please hit Update to integrate with Cloudanix');
+define('cloudanix_success_message', 'Updated settings successfully!!!');
+define('cloudanix_failure_message', 'Failed to update settings. Please hit Update to store settings with Cloudanix');
+define('cloudanix_status_active_key', 'active');
+define('cloudanix_status_inactive_key', 'inactive');
+define('cloudanix_status_trial_key', 'trial');
+define('cloudanix_status_expired_key', 'expired');
